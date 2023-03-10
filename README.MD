@@ -13,6 +13,7 @@
 ```
 pip install Flask
 pip install Flask-Mail
+pip install gunicorn
 
 ```
 ### veja em funcionamento===>
