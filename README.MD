@@ -1,12 +1,17 @@
 # formulario para atualização de cadastro
-#
 
-## 
+### tecnologias 
 
-*python
-*flask
-*html
-*bootstrap -v5
+* python
+* flask
+* html
+* bootstrap -v5
 
-## pip install Flask
-## pip install Flask-Mail
+
+### bibliotecas
+
+```
+pip install Flask
+pip install Flask-Mail
+
+```

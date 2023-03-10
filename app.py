@@ -62,10 +62,23 @@ def send():
         msg = Message(
             subject= f'{formContato.nome} atualização de cadastro-Redenção',
             sender= app.config.get("MAIL_USERNAME"),
-            recipients= ['alanaestefannyconsultoria@gmail.com', app.config.get("MAIL_USERNAME")],
+            recipients= ['alanaestefannyconsultoria@gmail.com','admredencao7@gmail.com', app.config.get("MAIL_USERNAME")],
             body= f'''
             
-            NOME :{formContato.nome} RG: {formContato.identidade},CPF:{formContato.cpf},DATA DE NASCIMENTO:{formContato.nascimento},ESTADO CIVIL:{formContato.civil},CONTATO:{formContato.telefone},ENDEREÇO:{formContato.endereco}, MENBRO OU CONGREGADO:{formContato.classificacao},DATA DE BATISMO{formContato.batismo},CARGO ECLESIASTICO:{formContato.batismo},NOME DO PAI:{formContato.pai}, NOME DA MÃE:{formContato.mae},Atualização de cadastro-Redenção:
+            NOME :{formContato.nome}, 
+            RG: {formContato.identidade},
+            CPF:{formContato.cpf},
+            DATA DE NASCIMENTO:{formContato.nascimento},
+            ESTADO CIVIL:{formContato.civil},
+            CONTATO:{formContato.telefone},
+            ENDEREÇO:{formContato.endereco},
+            MENBRO OU CONGREGADO:{formContato.classificacao},
+            DATA DE BATISMO{formContato.batismo},
+            CARGO ECLESIASTICO:{formContato.batismo},
+            NOME DO PAI:{formContato.pai},
+            NOME DA MÃE:{formContato.mae},
+
+            Atualização de cadastro-Redenção:
 
             {formContato.mensagem}
             
@@ -73,8 +86,8 @@ def send():
         )
 
         mail.send(msg)
-        flash('Mensagem Enviada com Sucesso!')
-    return redirect('/',)
+        flash('Formulario Enviado com Sucesso!  O Senhor é Meu Pastor,nada me faltará!')
+    return redirect('/')
 
 
 

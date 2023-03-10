@@ -15,29 +15,31 @@
   <!-- https://cdnjs.com/libraries/font-awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 
-  <title>Formulario</title>
+  <title>Formulario-Pre-Cadastro</title>
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <div class="alert alert-success" role="alert">
+  <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    {% endwith %}
 </head>
 
-<body class="content">
+<body class="content m-5">
 
   <header class="header">
     <nav class="navbar bg-body-tertiary">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <Span>Atualização | Cadastro</Span>
+          <Span>Atualização | Cadastro-Redenção</Span>
         </a>
       </div>
     </nav>
   </header>
-  {% with messages = get_flashed_messages() %}
-  {% if messages %}
-  <ul class=flashes>
-    {% for message in messages %}
-    <li>{{ message }}</li>
-    {% endfor %}
-  </ul>
-  {% endif %}
-  {% endwith %}
   <main class="formulario">
     <form action="/send" method="POST">
       <div class="mb-3">
@@ -108,10 +110,6 @@
         <input class="btn btn-primary" type="submit" value="Enviar">
     </form>
   </main>
-
-
-
-
 
 
   <!-- Optional JavaScript; choose one of the two! -->
