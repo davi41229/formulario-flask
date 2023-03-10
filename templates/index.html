@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
+
+  <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+  <!-- https://cdnjs.com/libraries/font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+  <title>Formulario</title>
+</head>
+
+<body class="content">
+
+  <header class="header">
+    <nav class="navbar bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <Span>Atualização | Cadastro</Span>
+        </a>
+      </div>
+    </nav>
+  </header>
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <ul class=flashes>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+  <main class="formulario">
+    <form action="/send" method="POST">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Nome Completo</label>
+        <input type="text" name="nome" class="form-control" id="exampleFormControlInput1" placeholder="Digite seu nome"
+          required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">RG</label>
+        <input type="text" name="identidade" class="form-control" id="exampleFormControlInput1"
+          placeholder="Digite seu nome" required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">CPF</label>
+        <input type="text" name="cpf" class="form-control" id="exampleFormControlInput1" placeholder="Digite seu nome"
+          required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Data de Nascimento</label>
+        <input type="text" name="nascimento" class="form-control" id="exampleFormControlInput1"
+          placeholder="Digite seu nome" required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Estado Civil</label>
+        <input type="text" name="civil" class="form-control" id="exampleFormControlInput1" placeholder="Digite seu nome"
+          required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Telefone</label>
+        <input type="text" name="telefone" class="form-control" id="exampleFormControlInput1"
+          placeholder="Digite seu nome" required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Rua,Bairro,Cidade,Estado,Cep</label>
+        <input type="text" name="endereco" class="form-control" id="exampleFormControlInput1"
+          placeholder="Digite seu nome" required>
+      </div>
+      <div class="mb-3">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Menbro ou Congregado?</label>
+          <input type="text" name="classificacao" class="form-control" id="exampleFormControlInput1"
+            placeholder="Digite seu nome" required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Data de Batismo</label>
+          <input type="text" name="batismo" class="form-control" id="exampleFormControlInput1"
+            placeholder="Digite seu nome" required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Cargo Eclesiastico</label>
+          <input type="text" name="cargo" class="form-control" id="exampleFormControlInput1"
+            placeholder="Digite seu nome" required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Nome do Pai</label>
+          <input type="text" name="pai" class="form-control" id="exampleFormControlInput1" placeholder="Digite seu nome"
+            required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Nome da Mãe</label>
+          <input type="text" name="mae" class="form-control" id="exampleFormControlInput1" placeholder="Digite seu nome"
+            required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+          <textarea class="form-control" name="mensagem" id="exampleFormControlTextarea1" rows="3" required></textarea>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Enviar">
+    </form>
+  </main>
+
+
+
+
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
