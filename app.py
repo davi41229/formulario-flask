@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, flash
+from flask import Flask, render_template, redirect, request, flash,os
 from flask_mail import Mail, Message
 from config import email,senha
 
@@ -94,4 +94,5 @@ def send():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=7650)
+    port = int(os.getenv("PORT"), "5000")
+    app.run(host="0.0.0.0", port=port)
