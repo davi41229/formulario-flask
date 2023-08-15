@@ -1,2 +1,2 @@
 email = 'contatoatualizacao21@gmail.com'
-senha = 'jbarlcrqyiqiukcf'
+senha = 'Cadastro@0926_Redencao'
