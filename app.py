@@ -19,7 +19,7 @@ app.config.update(mail_settings)
 mail = Mail(app)
 
 class Contato:
-    def __init__(self, nome, identidade,cpf,nascimento,civil,telefone,endereco,classificacao,batismo,cargo,pai,mae,mensagem):
+    def __init__(self, nome, identidade,cpf,nascimento,civil,telefone,endereco,classificacao,batismo,chegada,cargo,congregacao,pai,mae,mensagem):
         self.nome = nome
         self.identidade = identidade
         self.cpf = cpf
@@ -29,7 +29,9 @@ class Contato:
         self.endereco = endereco
         self.classificacao = classificacao
         self.batismo = batismo
+        self.chegada = chegada
         self.cargo = cargo
+        self.congregacao = congregacao
         self.pai = pai
         self.mae = mae
         self.mensagem = mensagem
@@ -53,7 +55,9 @@ def send():
             request.form['endereco'],
             request.form['classificacao'],
             request.form['batismo'],
+            request.form['chegada'],
             request.form['cargo'],
+            request.form['congregacao'],
             request.form['pai'],
             request.form['mae'],
             request.form['mensagem']
@@ -75,7 +79,9 @@ def send():
             ENDEREÇO:{formContato.endereco},
             MENBRO OU CONGREGADO:{formContato.classificacao},
             DATA DE BATISMO{formContato.batismo},
-            CARGO ECLESIASTICO:{formContato.batismo},
+            DATA DE CHEGADA NA IGREJA{formContato.chegada},
+            CARGO ECLESIASTICO:{formContato.cargo},
+            NOME DA CONGREGACAO{formContato.congregacao},
             NOME DO PAI:{formContato.pai},
             NOME DA MÃE:{formContato.mae},
 
