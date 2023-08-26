@@ -19,9 +19,10 @@ app.config.update(mail_settings)
 mail = Mail(app)
 
 class Contato:
-    def __init__(self, nome, identidade,cpf,nascimento,civil,telefone,endereco,classificacao,batismo,chegada,cargo,congregacao,pai,mae,mensagem):
+    def __init__(self, nome, identidade,orgaoexpedidor,cpf,nascimento,civil,telefone,endereco,classificacao,batismo,chegada,cargo,congregacao,pai,mae,mensagem):
         self.nome = nome
         self.identidade = identidade
+        self.orgaoexpedidor = orgaoexpedidor
         self.cpf = cpf
         self.nascimento = nascimento
         self.civil = civil
@@ -48,6 +49,7 @@ def send():
         formContato = Contato(
             request.form['nome'],
             request.form['identidade'],
+            request.form['orgaoexpedidor'],
             request.form['cpf'],
             request.form['nascimento'],
             request.form['civil'],
@@ -72,6 +74,7 @@ def send():
             
             NOME :{formContato.nome}, 
             RG: {formContato.identidade},
+            ORGÂO-EXPEDIDOR - RG: {formContato.orgaoexpedidor},
             CPF:{formContato.cpf},
             DATA DE NASCIMENTO:{formContato.nascimento},
             ESTADO CIVIL:{formContato.civil},
