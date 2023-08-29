@@ -80,7 +80,7 @@ def send():
             ESTADO CIVIL:{formContato.civil},
             CONTATO:{formContato.telefone},
             ENDEREÇO:{formContato.endereco},
-            MENBRO OU CONGREGADO:{formContato.classificacao},
+            MEMBRO OU CONGREGADO:{formContato.classificacao},
             DATA DE BATISMO{formContato.batismo},
             DATA DE CHEGADA NA IGREJA{formContato.chegada},
             CARGO ECLESIASTICO:{formContato.cargo},
