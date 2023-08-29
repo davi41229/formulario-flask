@@ -74,7 +74,7 @@ def send():
             
             NOME :{formContato.nome}, 
             RG: {formContato.identidade},
-            ORGÂO-EXPEDIDOR - RG: {formContato.orgaoexpedidor},
+            ORGAOEXPEDIDOR: {formContato.orgaoexpedidor},
             CPF:{formContato.cpf},
             DATA DE NASCIMENTO:{formContato.nascimento},
             ESTADO CIVIL:{formContato.civil},
